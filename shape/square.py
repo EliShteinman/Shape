@@ -52,4 +52,3 @@ class Square(Rectangle):
         if not isinstance(other, Square):
             return NotImplemented
         return self.width == other.width
-

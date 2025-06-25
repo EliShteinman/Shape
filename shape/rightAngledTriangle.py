@@ -58,5 +58,3 @@ class RightAngledTriangle(Shape):
         return (self.base == other.base and self.height == other.height) or (
             self.base == other.height and self.height == other.base
         )
-
-

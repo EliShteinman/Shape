@@ -53,5 +53,3 @@ class Circle(Shape):
         if not isinstance(other, Circle):
             return NotImplemented
         return self.radius == other.radius
-
-

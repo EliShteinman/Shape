@@ -51,5 +51,3 @@ class Hexagon(Shape):
         if not isinstance(other, Hexagon):
             return NotImplemented
         return self.side_length == other.side_length
-
-

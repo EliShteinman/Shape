@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from functools import total_ordering
 
+
 @total_ordering
 class Shape(ABC):
     """

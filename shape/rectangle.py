@@ -52,4 +52,3 @@ class Rectangle(Shape):
         return (self.width == other.width and self.height == other.height) or (
             self.width == other.height and self.height == other.width
         )
-
