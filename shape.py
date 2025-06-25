@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
+from functools import total_ordering
 
-
+@total_ordering
 class Shape(ABC):
     """
     Abstract base class for all shapes.
@@ -56,3 +57,23 @@ class Shape(ABC):
         if not isinstance(other, Shape):
             return NotImplemented
         return self.get_area() < other.get_area()
+
+    def __add__(self, other) -> float:
+        """
+        Adds the area of this shape to another shape's area.
+        :param other: An object that has a get_area() method.
+        :return: float - The sum of the areas of both shapes.
+        """
+        if not isinstance(other, Shape):
+            return NotImplemented
+        return self.get_area() + other.get_area()
+
+    def __sub__(self, other) -> float:
+        """
+        Subtracts the area of another shape from this shape's area.
+        :param other: An object that has a get_area() method.
+        :return: float - The difference of the areas of both shapes.
+        """
+        if not isinstance(other, Shape):
+            return NotImplemented
+        return abs(self.get_area() - other.get_area())
