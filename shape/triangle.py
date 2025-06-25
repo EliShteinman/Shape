@@ -21,7 +21,8 @@ class Triangle(Rectangle):
         A triangle is half the area of the rectangle that surrounds it.
         :return: float - The area of the triangle.
         """
-        # return super().get_area() / 2  # Alternative using the Rectangle's area
+        # Alternative using the Rectangle's area
+        # return super().get_area() / 2
         return 0.5 * self.width * self.height
 
     def get_perimeter(self) -> float:
