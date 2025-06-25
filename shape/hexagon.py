@@ -8,6 +8,12 @@ class Hexagon(Shape):
     """
 
     def __init__(self, side_length: float) -> None:
+        """
+        Initialize a Hexagon instance.
+        :param side_length:
+        """
+        if side_length <= 0:
+            raise ValueError("Side length must be positive.")
         self.side_length: float = side_length
 
     def get_area(self) -> float:

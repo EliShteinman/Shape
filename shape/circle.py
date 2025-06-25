@@ -12,6 +12,8 @@ class Circle(Shape):
         Initialize a Circle instance.
         :param radius:
         """
+        if radius <= 0:
+            raise ValueError("Radius must be positive.")
         self.radius: float = radius
 
     def get_area(self) -> float:

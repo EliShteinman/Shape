@@ -8,6 +8,8 @@ class Rectangle(Shape):
         :param width: float - The width of the rectangle.
         :param height: float - The height of the rectangle.
         """
+        if width <= 0 or height <= 0:
+            raise ValueError("Width and height must be positive.")
         self.width: float = width
         self.height: float = height
 

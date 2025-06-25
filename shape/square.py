@@ -11,6 +11,8 @@ class Square(Rectangle):
         Initialize a Square instance.
         :param side_length: float - The length of the sides of the square.
         """
+        if side_length <= 0:
+            raise ValueError("Side length must be positive.")
         super().__init__(side_length, side_length)
 
     def get_area(self) -> float:

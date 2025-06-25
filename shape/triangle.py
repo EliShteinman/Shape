@@ -13,6 +13,8 @@ class Triangle(Rectangle):
         :param base: float - The base of the triangle.
         :param height: float - The height of the triangle.
         """
+        if base <= 0 or height <= 0:
+            raise ValueError("Base and height must be positive.")
         super().__init__(base, height)
 
     def get_area(self) -> float:
