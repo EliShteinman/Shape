@@ -1,5 +1,5 @@
 from math import sqrt
-from shape import Shape
+from .shape import Shape
 
 
 class Hexagon(Shape):

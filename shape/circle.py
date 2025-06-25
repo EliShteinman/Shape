@@ -1,5 +1,5 @@
 from math import pi
-from shape import Shape
+from .shape import Shape
 
 
 class Circle(Shape):
