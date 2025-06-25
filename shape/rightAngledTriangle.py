@@ -15,7 +15,8 @@ class RightAngledTriangle(Shape):
         """
         if base <= 0 or height <= 0:
             raise ValueError("Base and height must be positive.")
-        super().__init__(base, height)
+        self.base: float = base
+        self.height: float = height
 
     def get_area(self) -> float:
         """
