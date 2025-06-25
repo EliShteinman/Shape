@@ -16,7 +16,7 @@ class Hexagon(Shape):
         The formula for the area of a regular hexagon is:
         Area = (3 * sqrt(3) * side_length^2) / 2
         """
-        return (3 * sqrt(3) * self.side_length**2) / 2
+        return (3 * sqrt(3) / 2) * self.side_length**2
 
     def get_perimeter(self) -> float:
         """
