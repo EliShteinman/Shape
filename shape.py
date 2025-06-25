@@ -46,3 +46,12 @@ class Shape(ABC):
         :return: bool - True if the shapes are equal, False otherwise.
         """
         pass
+
+    @abstractmethod
+    def __lt__(self, other) -> bool:
+        """
+        Abstract method to compare two shapes for less than.
+        :param other: The other shape to compare with.
+        :return: bool - True if this shape is less than the other, False otherwise.
+        """
+        pass

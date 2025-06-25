@@ -51,3 +51,11 @@ class Hexagon(Shape):
         if not isinstance(other, Hexagon):
             return NotImplemented
         return self.side_length == other.side_length
+
+    def __lt__(self, other) -> bool:
+        """
+        Compare two hexagons based on their side lengths.
+        """
+        if not isinstance(other, Hexagon):
+            return NotImplemented
+        return self.side_length < other.side_length

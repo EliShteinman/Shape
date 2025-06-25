@@ -53,3 +53,13 @@ class Circle(Shape):
         if not isinstance(other, Circle):
             return NotImplemented
         return self.radius == other.radius
+
+    def __lt__(self, other) -> bool:
+        """
+        Compare two circles based on their radii.
+        :param other: Circle - The other circle to compare with.
+        :return: bool - True if this circle's radius is less than the other's, False otherwise.
+        """
+        if not isinstance(other, Circle):
+            return NotImplemented
+        return self.radius < other.radius

@@ -52,3 +52,13 @@ class Square(Rectangle):
         if not isinstance(other, Square):
             return NotImplemented
         return self.width == other.width
+
+    def __lt__(self, other) -> bool:
+        """
+        Compare two squares based on their side lengths.
+        :param other:
+        :return: bool - True if this square's side length is less than the other's, False otherwise.
+        """
+        if not isinstance(other, Square):
+            return NotImplemented
+        return self.width < other.width

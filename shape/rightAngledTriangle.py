@@ -58,3 +58,13 @@ class RightAngledTriangle(Shape):
         return (self.base == other.base and self.height == other.height) or (
             self.base == other.height and self.height == other.base
         )
+
+    def __lt__(self, other) -> bool:
+        """
+        Compare two right-angled triangles based on their area.
+        :param other:
+        :return: bool - True if this triangle's area is less than the other's, False otherwise.
+        """
+        if not isinstance(other, RightAngledTriangle):
+            return NotImplemented
+        return self.get_area() < other.get_area()

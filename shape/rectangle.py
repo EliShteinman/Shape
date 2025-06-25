@@ -52,3 +52,13 @@ class Rectangle(Shape):
         return (self.width == other.width and self.height == other.height) or (
             self.width == other.height and self.height == other.width
         )
+
+    def __lt__(self, other) -> bool:
+        """
+        Compare two rectangles based on their area.
+        :param other: Rectangle - The rectangle to compare with.
+        :return: bool - True if this rectangle's area is less than the other's, False otherwise.
+        """
+        if not isinstance(other, Rectangle):
+            return NotImplemented
+        return self.get_area() < other.get_area()
