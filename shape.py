@@ -47,11 +47,12 @@ class Shape(ABC):
         """
         pass
 
-    @abstractmethod
     def __lt__(self, other) -> bool:
         """
-        Abstract method to compare two shapes for less than.
-        :param other: The other shape to compare with.
-        :return: bool - True if this shape is less than the other, False otherwise.
+        Compares this shape to another based on their area.
+        :param other: An object that has a get_area() method.
+        :return: bool - True if this shape's area is less than the other's, False otherwise.
         """
-        pass
+        if not isinstance(other, Shape):
+            return NotImplemented
+        return self.get_area() < other.get_area()
