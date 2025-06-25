@@ -2,7 +2,7 @@ from math import sqrt
 from rectangle import Rectangle
 
 
-class Triangle(Rectangle):
+class RightAngledTriangle(Rectangle):
     """
     A class representing a right-angled triangle, inheriting from Rectangle.
     """
