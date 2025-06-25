@@ -1,5 +1,6 @@
 from rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     A class representing a square, inheriting from Rectangle.
@@ -18,6 +19,13 @@ class Square(Rectangle):
         :return: float - The area of the square.
         """
         return super().get_area()
+
+    def get_perimeter(self) -> float:
+        """
+        Calculate the perimeter of the square.
+        :return: float - The perimeter of the square.
+        """
+        return super().get_perimeter()
 
     def __str__(self) -> str:
         """

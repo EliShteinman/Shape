@@ -1,5 +1,6 @@
 from shape import Shape
 
+
 class Rectangle(Shape):
     def __init__(self, width: float, height: float) -> None:
         """
@@ -7,8 +8,8 @@ class Rectangle(Shape):
         :param width: float - The width of the rectangle.
         :param height: float - The height of the rectangle.
         """
-        self.width:float = width
-        self.height:float = height
+        self.width: float = width
+        self.height: float = height
 
     def get_area(self) -> float:
         """
@@ -16,6 +17,13 @@ class Rectangle(Shape):
         :return: float - The area of the rectangle.
         """
         return self.width * self.height
+
+    def get_perimeter(self) -> float:
+        """
+        Calculate the perimeter of the rectangle.
+        :return: float - The perimeter of the rectangle.
+        """
+        return 2 * (self.width + self.height)
 
     def __str__(self) -> str:
         """
