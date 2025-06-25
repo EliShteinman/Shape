@@ -1,6 +1,7 @@
 from math import sqrt
 from shape import Shape
 
+
 class RightAngledTriangle(Shape):
     """
     A class representing a right-angled triangle, inheriting from Rectangle.
@@ -54,4 +55,6 @@ class RightAngledTriangle(Shape):
         """
         if not isinstance(other, RightAngledTriangle):
             return NotImplemented
-        return (self.base == other.base and self.height == other.height) or (self.base == other.height and self.height == other.base)
+        return (self.base == other.base and self.height == other.height) or (
+            self.base == other.height and self.height == other.base
+        )

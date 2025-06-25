@@ -49,4 +49,6 @@ class Rectangle(Shape):
         """
         if not isinstance(other, Rectangle):
             return NotImplemented
-        return (self.width == other.width and self.height == other.height) or (self.width == other.height and self.height == other.width)
+        return (self.width == other.width and self.height == other.height) or (
+            self.width == other.height and self.height == other.width
+        )
