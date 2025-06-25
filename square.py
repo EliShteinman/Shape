@@ -1,8 +1,11 @@
-from rectangle import Rectangle
+from shape import Shape
 
-class Square(Rectangle):
-    def __init__(self, side_length):
-        super().__init__(side_length, side_length)
+class Square(Shape):
+    def __init__(self, side_length: float) -> None:
+        self.side_length:float = side_length
 
-    def __str__(self):
-        return f"Square with side length {self.width}"
+    def get_area(self) -> float:
+        return self.side_length ** 2
+
+    def __str__(self) -> str:
+        return f"Square with side length {self.side_length}"
