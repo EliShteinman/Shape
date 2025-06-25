@@ -52,3 +52,13 @@ class Rectangle(Shape):
         return (self.width == other.width and self.height == other.height) or (
             self.width == other.height and self.height == other.width
         )
+
+    def __mul__(self, scalar: float) -> "Rectangle":
+        """
+        Scale the rectangle by a scalar value.
+        :param scalar: float - The scalar value to scale the rectangle.
+        :return: Rectangle - A new Rectangle instance with scaled dimensions.
+        """
+        if scalar <= 0:
+            raise ValueError("Scalar must be positive.")
+        return Rectangle(self.width * scalar, self.height * scalar)

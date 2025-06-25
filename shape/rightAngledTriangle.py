@@ -59,3 +59,11 @@ class RightAngledTriangle(Shape):
         return (self.base == other.base and self.height == other.height) or (
             self.base == other.height and self.height == other.base
         )
+
+    def __mul__(self, scalar: float) -> "RightAngledTriangle":
+        """
+        Scale the triangle by a scalar value.
+        :param scalar: float - The scalar value to scale the triangle.
+        :return: RightAngledTriangle - A new RightAngledTriangle instance with scaled dimensions.
+        """
+        return RightAngledTriangle(self.base * scalar, self.height * scalar)

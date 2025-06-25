@@ -51,3 +51,13 @@ class Hexagon(Shape):
         if not isinstance(other, Hexagon):
             return NotImplemented
         return self.side_length == other.side_length
+
+    def __mul__(self, scalar: float) -> "Hexagon":
+        """
+        Scale the hexagon by a scalar value.
+        :param scalar: float - The scalar value to scale the hexagon.
+        :return: Hexagon - A new hexagon instance scaled by the scalar value.
+        """
+        if scalar <= 0:
+            raise ValueError("Scalar must be positive.")
+        return Hexagon(self.side_length * scalar)

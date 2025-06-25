@@ -53,3 +53,13 @@ class Circle(Shape):
         if not isinstance(other, Circle):
             return NotImplemented
         return self.radius == other.radius
+
+    def __mul__(self, scalar: float) -> "Circle":
+        """
+        Scale the circle by a scalar value.
+        :param scalar: float - The scalar value to scale the circle.
+        :return: Circle - A new Circle instance scaled by the scalar value.
+        """
+        if scalar <= 0:
+            raise ValueError("Scalar must be positive.")
+        return Circle(self.radius * scalar)

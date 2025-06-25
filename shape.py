@@ -78,3 +78,12 @@ class Shape(ABC):
         if not isinstance(other, Shape):
             return NotImplemented
         return abs(self.get_area() - other.get_area())
+
+    @abstractmethod
+    def __mul__(self, scalar: float) -> "Shape":
+        """
+        Scales the shape by a scalar value.
+        :param scalar: float - The scalar value to scale the shape.
+        :return: object - A new shape instance scaled by the scalar value.
+        """
+        pass

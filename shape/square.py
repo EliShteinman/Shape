@@ -52,3 +52,13 @@ class Square(Rectangle):
         if not isinstance(other, Square):
             return NotImplemented
         return self.width == other.width
+
+    def __mul__(self, scalar: float) -> "Square":
+        """
+        Scale the square by a scalar value.
+        :param scalar: float - The scalar value to scale the square.
+        :return: Square - A new Square instance scaled by the scalar value.
+        """
+        if scalar <= 0:
+            raise ValueError("Scalar must be positive.")
+        return Square(self.width * scalar)
