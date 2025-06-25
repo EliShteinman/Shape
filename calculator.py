@@ -35,7 +35,7 @@ def demonstrate_sorting_and_comparison():
         Rectangle(5, 10),  # Area: 50 (should be equal to the other 10x5)
         RightAngledTriangle(10, 20),  # Area: 100
         Hexagon(8),  # Area: ~166
-        Square(7.071)  # Area: ~50
+        Square(7.071),  # Area: ~50
     ]
 
     print("Original list of shapes:")
