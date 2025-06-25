@@ -36,4 +36,10 @@ class Hexagon(Shape):
         """
         Return a string representation of the hexagon.
         """
+        return f"Hexagon with side length {self.side_length}"
+
+    def __repr__(self):
+        """
+        Return a detailed string representation of the hexagon.
+        """
         return f"Hexagon(side_length={self.side_length})"

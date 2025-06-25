@@ -35,4 +35,11 @@ class Circle(Shape):
         Return a string representation of the circle.
         :return: str - String representation of the circle.
         """
-        return f"Circle with radius {self.radius}"
+        return f"A circle with a radius of {self.radius}"
+
+    def __repr__(self) -> str:
+        """
+        Return a detailed string representation of the circle.
+        :return: str - Detailed string representation of the circle.
+        """
+        return f"Circle(radius={self.radius})"

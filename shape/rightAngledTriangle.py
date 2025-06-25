@@ -41,3 +41,10 @@ class RightAngledTriangle(Rectangle):
         :return: str - String representation of the triangle.
         """
         return f"Triangle with base {self.width} and height {self.height}"
+
+    def __repr__(self) -> str:
+        """
+        Return a detailed string representation of the triangle.
+        :return: str - Detailed string representation of the triangle.
+        """
+        return f"RightAngledTriangle(base={self.width}, height={self.height})"

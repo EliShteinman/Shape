@@ -35,3 +35,10 @@ class Square(Rectangle):
         :return: str - String representation of the square.
         """
         return f"Square with side length {self.width}"
+
+    def __repr__(self) -> str:
+        """
+        Return a detailed string representation of the square.
+        :return: str - Detailed string representation of the square.
+        """
+        return f"Square(side_length={self.width})"

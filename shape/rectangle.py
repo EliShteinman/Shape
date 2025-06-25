@@ -32,4 +32,11 @@ class Rectangle(Shape):
         Return a string representation of the rectangle.
         :return: str - String representation of the rectangle.
         """
+        return f"Rectangle with width {self.width} and height {self.height}"
+
+    def __repr__(self) -> str:
+        """
+        Return a detailed string representation of the rectangle.
+        :return: str - Detailed string representation of the rectangle.
+        """
         return f"Rectangle(width={self.width}, height={self.height})"

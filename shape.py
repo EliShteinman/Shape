@@ -29,3 +29,11 @@ class Shape(ABC):
         :return: str - String representation of the shape.
         """
         pass
+
+    @abstractmethod
+    def __repr__(self) -> str:
+        """
+        Abstract method to return a detailed string representation of the shape.
+        :return: str - Detailed string representation of the shape.
+        """
+        pass
