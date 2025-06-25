@@ -1,6 +1,9 @@
 from rectangle import Rectangle
 
 class Square(Rectangle):
+    """
+    A class representing a square, inheriting from Rectangle.
+    """
 
     def __init__(self, side_length: float) -> None:
         """
