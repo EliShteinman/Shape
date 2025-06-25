@@ -40,3 +40,13 @@ class Rectangle(Shape):
         :return: str - Detailed string representation of the rectangle.
         """
         return f"Rectangle(width={self.width}, height={self.height})"
+
+    def __eq__(self, other) -> bool:
+        """
+        Check if two rectangles are equal based on their width and height.
+        :param other:
+        :return: bool - True if both rectangles have the same width and height, False otherwise.
+        """
+        if not isinstance(other, Rectangle):
+            return NotImplemented
+        return (self.width == other.width and self.height == other.height) or (self.width == other.height and self.height == other.width)

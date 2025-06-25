@@ -43,3 +43,13 @@ class Circle(Shape):
         :return: str - Detailed string representation of the circle.
         """
         return f"Circle(radius={self.radius})"
+
+    def __eq__(self, other) -> bool:
+        """
+        Check if two circles are equal based on their radii.
+        :param other: Circle - The other circle to compare with.
+        :return: bool - True if both circles have the same radius, False otherwise.
+        """
+        if not isinstance(other, Circle):
+            return NotImplemented
+        return self.radius == other.radius

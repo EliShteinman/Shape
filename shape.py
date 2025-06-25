@@ -37,3 +37,12 @@ class Shape(ABC):
         :return: str - Detailed string representation of the shape.
         """
         pass
+
+    @abstractmethod
+    def __eq__(self, other) -> bool:
+        """
+        Abstract method to compare two shapes for equality.
+        :param other: The other shape to compare with.
+        :return: bool - True if the shapes are equal, False otherwise.
+        """
+        pass

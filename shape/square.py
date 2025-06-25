@@ -42,3 +42,13 @@ class Square(Rectangle):
         :return: str - Detailed string representation of the square.
         """
         return f"Square(side_length={self.width})"
+
+    def __eq__(self, other) -> bool:
+        """
+        Check if two squares are equal based on their side lengths.
+        :param other:
+        :return: bool - True if both squares have the same side length, False otherwise.
+        """
+        if not isinstance(other, Square):
+            return NotImplemented
+        return self.width == other.width

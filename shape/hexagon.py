@@ -43,3 +43,11 @@ class Hexagon(Shape):
         Return a detailed string representation of the hexagon.
         """
         return f"Hexagon(side_length={self.side_length})"
+
+    def __eq__(self, other) -> bool:
+        """
+        Check if two hexagons are equal based on their side lengths.
+        """
+        if not isinstance(other, Hexagon):
+            return NotImplemented
+        return self.side_length == other.side_length

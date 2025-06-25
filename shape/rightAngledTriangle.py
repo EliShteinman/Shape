@@ -48,3 +48,13 @@ class RightAngledTriangle(Rectangle):
         :return: str - Detailed string representation of the triangle.
         """
         return f"RightAngledTriangle(base={self.width}, height={self.height})"
+
+    def __eq__(self, other) -> bool:
+        """
+        Check if two right-angled triangles are equal based on their base and height.
+        :param other:
+        :return: bool - True if both triangles have the same base and height, False otherwise.
+        """
+        if not isinstance(other, RightAngledTriangle):
+            return NotImplemented
+        return (self.width == other.width and self.height == other.height) or (self.width == other.height and self.height == other.width)
