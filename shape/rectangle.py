@@ -2,6 +2,10 @@ from .shape import Shape
 
 
 class Rectangle(Shape):
+    """
+    A class representing a rectangle, inheriting from the Shape class.
+    """
+
     def __init__(self, width: float, height: float) -> None:
         """
         Initialize a Rectangle instance.
