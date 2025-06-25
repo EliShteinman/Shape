@@ -18,6 +18,14 @@ class Hexagon(Shape):
         """
         return (3 * sqrt(3) * self.side_length**2) / 2
 
+    def get_perimeter(self) -> float:
+        """
+        Calculate the perimeter of the hexagon.
+        The formula for the perimeter of a regular hexagon is:
+        Perimeter = 6 * side_length
+        """
+        return 6 * self.side_length
+
     def __str__(self):
         """
         Return a string representation of the hexagon.
